@@ -1,0 +1,16 @@
+.account .account-details .discriminator {visibility: hidden;}
+.account .status {transform: translate(20px, -2px);}
+.account .status.status-online:after,
+.account .status.status-idle:after,
+.account .status.status-dnd:after,
+.account .status.status-invisible:after {
+    color: #D2D2D2;
+    font-size: 13px;
+    position: absolute;
+    left: 15px;
+    top: -2px;
+}
+.account .status.status-online:after {content: "online";}
+.account .status.status-idle:after {content: "idle";}
+.account .status.status-dnd:after {content: "busy";}
+.account .status.status-invisible:after {content: "invisible";}
