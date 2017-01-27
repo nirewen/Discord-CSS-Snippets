@@ -1,0 +1,83 @@
+/* Note: I'm still working on it */
+
+.friends-online, .guild-separator {
+    display: none;
+}
+
+.guilds-wrapper{
+    bottom: -64px;
+    transition: 500ms;
+}
+.guilds-wrapper:hover{
+    bottom: 0;
+    transition: 500ms;
+    background: rgba(0,0,0,0.8);
+}
+.guilds-wrapper {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0);
+}
+.guilds-wrapper .scroller-wrap{
+    width: 100%;
+    height: 80px;
+}
+.guilds-wrapper .guilds{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px 0;
+    width: 100%;
+    position: absolute;
+}
+.guilds-wrapper .guilds .guild{
+    margin: 1px 5px;
+}
+.guilds-wrapper .guilds .guild+.guild{
+    margin: 0 5px;
+}
+.guilds-wrapper .guilds .guild.selected:before{
+    margin-top: -37px;
+    width: 12px;
+    height: 12px;
+    left: 19px !important;
+    opacity: 2 !important;
+}
+.guilds-wrapper .guilds .guild.unread:before{
+    margin-top: -37px;
+    left: 19px;
+    opacity: 2 !important;
+}
+
+.guilds-wrapper .guilds .guild.selected .guild-inner {
+    border-radius: 50% !important;
+}
+
+.guilds-wrapper .guilds .guild:not(.selected) .guild-inner, .guilds-add {
+    opacity:.1 !important;
+    transition: all .1s ease-in-out !important; 
+}
+
+.guilds-wrapper .guilds .guild:hover:not(.selected) .guild-inner, .guilds-add:hover, .guilds-wrapper .guilds .guild.active .guild-inner {
+    opacity: 1 !important;
+    transition: 
+        opacity .2s ease-in-out !important,
+        border-radius .2s ease-in-out !important; 
+    transform: scale(1.1,1.1) !important;
+    border-radius: 50% !important;
+}
+
+.guilds-wrapper .guilds .guild.active:after {
+    content: "";
+    display: flex;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: 19px;
+    background-color: white;
+}
