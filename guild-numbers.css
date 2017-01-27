@@ -1,0 +1,24 @@
+.guild:after {
+	position: relative;
+	left: -2px;
+	bottom: 52px;
+	background-color: rgb(17,17,17);
+	box-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px, rgba(255, 255, 255, 0.14902) 0px 1px 0px inset;
+	color: rgb(238,238,238);
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 12px;
+	display: inline-block;
+	text-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px;
+	border-radius: 3px;
+	padding: 3px 6px;
+}
+.guild:nth-child(1):after {content: "1";}
+.guild:nth-child(5):after {content: "2";}
+.guild:nth-child(6):after {content: "3";}
+.guild:nth-child(7):after {content: "4";}
+.guild:nth-child(8):after {content: "5";}
+.guild:nth-child(9):after {content: "6";}
+.guild:nth-child(10):after {content: "7";}
+.guild:nth-child(11):after {content: "8";}
+.guild:nth-child(12):after {content: "9";}
